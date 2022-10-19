@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b815ffb0-16fe-4c32-a7c7-1775f2ea6ee5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdLibraryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dto/Dvd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/UserIO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/UserIOConsoleImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GKLTY6pVtj6z2B5cOko7BEskSV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "/Users/neyssacadet/java-classes-and-objects-assessment-dvd-library-neyssacadet",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b815ffb0-16fe-4c32-a7c7-1775f2ea6ee5" name="Changes" comment="" />
+      <created>1666132336334</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666132336334</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
