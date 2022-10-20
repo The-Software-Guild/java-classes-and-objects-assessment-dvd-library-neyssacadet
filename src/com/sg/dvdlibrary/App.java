@@ -15,7 +15,13 @@ import com.sg.dvdlibrary.ui.UserIOConsoleImpl;
 public class App {
 
     public static void main(String[] args) throws DvdLibraryDaoException {
-        DvdLibraryController controller= new DvdLibraryController();
+
+        UserIO myIo = new UserIOConsoleImpl();
+        DvdLibraryView myView = new DvdLibraryView(myIo);
+        DvdLibraryDao myDao = new DvdLibraryDaoImpl();
+        DvdLibraryController controller =
+                new DvdLibraryController(myDao, myView);
         controller.run();
     }
+
 }

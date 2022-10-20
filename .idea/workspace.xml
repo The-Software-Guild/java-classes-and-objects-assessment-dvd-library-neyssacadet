@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b815ffb0-16fe-4c32-a7c7-1775f2ea6ee5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/library.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/controller/DvdLibraryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/ui/DvdLibraryView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/ui/DvdLibraryView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdLibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdLibraryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

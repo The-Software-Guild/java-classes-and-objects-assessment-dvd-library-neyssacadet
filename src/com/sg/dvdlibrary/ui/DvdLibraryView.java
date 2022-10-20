@@ -9,7 +9,12 @@ import java.util.List;
 
 public class DvdLibraryView {
     //getting access to UIO and UIOCImpl by creating an object named io
-    private UserIO io = new UserIOConsoleImpl();
+    private UserIO io;
+
+    //constructor that initializes view and dao
+    public DvdLibraryView(UserIO io){
+        this.io = io;
+    }
 
     public int printMenuAndGetSelection() {
         io.print("Main Menu");
