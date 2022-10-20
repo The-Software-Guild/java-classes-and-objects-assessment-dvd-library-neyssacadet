@@ -16,38 +16,39 @@ public class Dvd {
         return title;
     }
     //Setter and getter for release dates
-    public void setReleaseDate(){
+    public void setReleaseDate(String ReleaseDate){
         this.ReleaseDate = ReleaseDate;
     }
     public String getReleaseDate(){
         return ReleaseDate;
     }
     //Setter and Getter for MPAA
-    public void setMPAA(){
+    public void setMPAA(String MPAA){
         this.MPAA = MPAA;
     }
     public String getMPAA(){
         return MPAA;
     }
     //Setter and Getter for DirectorsName
-    public void setDirectorsName(){
+    public void setDirectorsName(String DirectorsName){
         this.DirectorsName = DirectorsName;
     }
     public String getDirectorsName(){
         return DirectorsName;
     }
     //Setter and Getter for Studio
-    public void setStudio(){
+    public void setStudio(String Studio){
         this.Studio = Studio;
     }
     public String getStudio(){
         return Studio;
     }
     //Setter and Getter for User Rating
-    public void setUserRating(){
+    public void setUserRating(String UserRating){
         this.UserRating = UserRating;
     }
     public String getUserRating(){
         return UserRating;
     }
+
 }

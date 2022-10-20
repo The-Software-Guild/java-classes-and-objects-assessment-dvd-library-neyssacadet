@@ -5,10 +5,6 @@
  */
 package com.sg.dvdlibrary.dao;
 
-/**
- *
- * @author salajrawi
- */
 public class DvdLibraryDaoException extends Exception{
 
     public DvdLibraryDaoException(String message) {

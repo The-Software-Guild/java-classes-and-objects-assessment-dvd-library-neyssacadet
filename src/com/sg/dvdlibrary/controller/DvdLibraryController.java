@@ -1,14 +1,25 @@
 package com.sg.dvdlibrary.controller;
 
+import com.sg.dvdlibrary.dao.DvdLibraryDao;
+import com.sg.dvdlibrary.dao.DvdLibraryDaoException;
+import com.sg.dvdlibrary.dao.DvdLibraryDaoImpl;
+import com.sg.dvdlibrary.dto.Dvd;
+import com.sg.dvdlibrary.ui.DvdLibraryView;
 import com.sg.dvdlibrary.ui.UserIO;
 import com.sg.dvdlibrary.ui.UserIOConsoleImpl;
+
+import java.util.List;
 
 public class DvdLibraryController {
     //getting access to the UserIO by creating an object name io
     private UserIO io = new UserIOConsoleImpl();
+    //getting access to the View by creating an object
+    private DvdLibraryView view = new DvdLibraryView();
+    //getting access to the Dao
+    private DvdLibraryDao dao = new DvdLibraryDaoImpl();
 
     //creating a method with no return that is going to display what matches user input
-    public void run(){
+    public void run() throws DvdLibraryDaoException {
         //initializing my variables
         boolean keepGoing = true;
         int menuSelection = 0;
@@ -35,19 +46,19 @@ public class DvdLibraryController {
 
             switch (menuSelection){
                 case 1:
-                    io.print("ADD DVD");
+                    createDvd();
                     break;
                 case 2:
-                    io.print("REMOVE DVD");
+                    removeDvd();
                     break;
                 case 3:
-                    io.print("VIEW DVDs");
+                    listDvds();
                     break;
                 case 4:
-                    io.print("DISPLAY DVD INFO");
+                    viewDvd();
                     break;
                 case 5:
-                    io.print("EDIT DVD");
+                    editDvd();
                     break;
                 case 6:
                     io.print("SEARCH DVD");
@@ -62,10 +73,122 @@ public class DvdLibraryController {
                     keepGoing = false;
                     break;
                 default:
-                    io.print("UNKNOWN COMMAND");
+                    unknownCommand();
             }
         }
-        io.print("GOOD BYE");
+        exitMessage();
+    }
+    private int getMenuSelection(){
+        return view.printMenuAndGetSelection();
     }
 
+    private void createDvd () throws DvdLibraryDaoException {
+        view.displayCreateDvDBanner();
+        Dvd newDvd = view.getNewDvdInfo();
+        dao.addDvd(newDvd.getTitle(), newDvd);
+        view.displayCreateSuccessBanner();
+    }
+    private void listDvds() throws DvdLibraryDaoException {
+        view.displayDisplayAllBanner();
+        List<Dvd> dvdList = dao.getAllDvds();
+        view.displayDvdList(dvdList);
+    }
+
+    private void viewDvd() throws DvdLibraryDaoException {
+        view.displayDisplayDvdBanner();
+        String title = view.getDvdTitleChoice();
+        Dvd dvd = dao.getDvd(title);
+        view.displayDvd(dvd);
+    }
+
+    private void removeDvd() throws DvdLibraryDaoException {
+        view.displayRemoveDvdBanner();
+        String title = view.getDvdTitleChoice();
+        Dvd removedDvd = dao.removeDvd(title);
+        view.displayRemoveResult(removedDvd);
+    }
+
+    private void unknownCommand() {
+        view.displayUnknownCommandBanner();
+    }
+
+    private void exitMessage() {
+        view.displayExitBanner();
+    }
+
+    private void editDvd() throws DvdLibraryDaoException {
+        view.displayEditDvdBanner();//=== Edit DVD ===
+        String title = view.getDvdTitleChoice();//asks user to input title
+        Dvd currentDVD = dao.getDvd(title);//returns title
+        if (currentDVD == null) {
+            view.displayNullDVD(); //if user inputs non-existing dvd, it will return "no such dvd"
+        } else {
+            view.displayDvd(currentDVD); //displays current dvd info
+            int editMenuSelection = 0;
+            boolean keepGoing = true;
+            while (keepGoing) {
+                editMenuSelection = view.printEditMenuAndGetSelection(); //Editing Menu
+
+                switch (editMenuSelection) {
+                    case 1:
+                        editReleaseDate(title);
+                        break;
+                    case 2:
+                        editMPAA(title);
+                        break;
+                    case 3:
+                        editDirectorName(title);
+                        break;
+                    case 4:
+                        editUserRating(title);
+                        break;
+                    case 5:
+                        editStudioName(title);
+                        break;
+                    case 6:
+                        keepGoing = false;
+                        break;
+                    default:
+                        unknownCommand();
+                }
+                if (keepGoing == false) {
+                    break;
+                }
+            }
+        }
+    }
+    private int getEditMenuSelection(){
+        return view.printMenuAndGetSelection();
+    }
+    private void editReleaseDate(String title) throws DvdLibraryDaoException {
+        view.displayEditReleaseDateBanner();//=== Edit DVD Release Date ===
+        String newReleaseDate = view.getNewReleaseDate();//asks input for new release date
+        dao.editReleaseDate(title, newReleaseDate);
+        view.displayEditDvdSuccess();//displays success in editing
+    }
+    private void editMPAA(String title) throws DvdLibraryDaoException {
+        view.displayEditMpaaBanner();
+        String newMpaaRating = view.getNewMpaaRating();
+        dao.editMPAA(title, newMpaaRating);
+        view.displayEditDvdSuccess();
+    }
+    private void editDirectorName(String title) throws DvdLibraryDaoException {
+        view.displayEditDirectorNameBanner();
+        String newDirectorName = view.getNewDirectorName();
+        dao.editDirectorName(title, newDirectorName);
+        view.displayEditDvdSuccess();
+    }
+    private void editUserRating(String title) throws DvdLibraryDaoException {
+        view.displayEditUserRating();
+        String newUserRating = view.getNewUserRating();
+        dao.editUserRating(title, newUserRating);
+        view.displayEditDvdSuccess();
+    }
+    private void editStudioName(String title) throws DvdLibraryDaoException {
+        view.displayEditStudio();
+        String newStudioName = view.getNewStudio();
+        dao.editStudio(title, newStudioName);
+        view.displayEditDvdSuccess();
+    }
 }
+

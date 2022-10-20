@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b815ffb0-16fe-4c32-a7c7-1775f2ea6ee5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/controller/DvdLibraryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/controller/DvdLibraryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/dao/DvdLibraryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/dao/DvdLibraryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/dao/DvdLibraryDaoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/dao/DvdLibraryDaoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/dto/Dvd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/dto/Dvd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/ui/UserIOConsoleImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-classes-and-objects-assessment-dvd-library-neyssacadet/com/sg/dvdlibrary/ui/UserIOConsoleImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdLibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdLibraryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dto/Dvd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/dto/Dvd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/UserIOConsoleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/UserIOConsoleImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,5 +80,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.MissingFormatArgumentException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
