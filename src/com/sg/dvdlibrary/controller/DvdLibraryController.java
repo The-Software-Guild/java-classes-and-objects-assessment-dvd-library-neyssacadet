@@ -35,14 +35,13 @@ public class DvdLibraryController {
             io.print("3. View DVDs in the Collection");
             io.print("4. Display information for particular DVD");
             io.print("5. Edit the information for Existing DVD");
-            io.print("6. Search for DVD by title");
-            io.print("7. Load DVD Library from a file");
-            io.print("8. Save DVD Library back to file");
-            io.print("9. Exit");
+            io.print("6. Load DVD Library from a file");
+            io.print("7. Save DVD Library back to file");
+            io.print("8. Exit");
 
             /* assigning another value to menuSelection. More precisely a int value using the readInt method from
                 UIOCImpl method which returns a number. menuSelection will be = to a number */
-            menuSelection = io.readInt("Please select from the above choices.", 1, 9);
+            menuSelection = io.readInt("Please select from the above choices.", 1, 8);
 
             switch (menuSelection){
                 case 1:
@@ -61,15 +60,12 @@ public class DvdLibraryController {
                     editDvd();
                     break;
                 case 6:
-                    io.print("SEARCH DVD");
-                    break;
-                case 7:
                     io.print("LOAD DVD LIBRARY FROM FILE");
                     break;
-                case 8:
+                case 7:
                     io.print("SAVE DVD LIBRARY BACK TO FILE");
                     break;
-                case 9:
+                case 8:
                     keepGoing = false;
                     break;
                 default:

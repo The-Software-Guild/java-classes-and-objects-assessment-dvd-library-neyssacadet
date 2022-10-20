@@ -38,29 +38,39 @@ public class DvdLibraryDaoImpl implements DvdLibraryDao {
         Dvd removedDvd = dvds.remove(title);
         return removedDvd;
     }
-
+    //EDITING SECTION
     @Override
     public Dvd editReleaseDate(String title, String newReleaseDate) throws DvdLibraryDaoException {
-
+        Dvd editDvd = dvds.get(title);
+        editDvd.setReleaseDate(newReleaseDate);
+        return editDvd;
     }
 
     @Override
     public Dvd editMPAA(String title, String newMpaaRating) throws DvdLibraryDaoException {
-        return null;
+        Dvd editDvd = dvds.get(title);
+        editDvd.setReleaseDate(newMpaaRating);
+        return editDvd;
     }
 
     @Override
     public Dvd editDirectorName(String title, String newDirectorName) throws DvdLibraryDaoException {
-        return null;
+        Dvd editDvd = dvds.get(title);
+        editDvd.setReleaseDate(newDirectorName);
+        return editDvd;
     }
 
     @Override
     public Dvd editUserRating(String title, String newUserRating) throws DvdLibraryDaoException {
-        return null;
+        Dvd editDvd = dvds.get(title);
+        editDvd.setReleaseDate(newUserRating);
+        return editDvd;
     }
 
     @Override
     public Dvd editStudio(String title, String newStudioName) throws DvdLibraryDaoException {
-        return null;
+        Dvd editDvd = dvds.get(title);
+        editDvd.setReleaseDate(newStudioName);
+        return editDvd;
     }
 }

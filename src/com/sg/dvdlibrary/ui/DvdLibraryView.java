@@ -18,12 +18,11 @@ public class DvdLibraryView {
         io.print("3. View DVDs in the Collection");
         io.print("4. Display information for particular DVD");
         io.print("5. Edit the information for Existing DVD");
-        io.print("6. Search for DVD by title");
-        io.print("7. Load DVD Library from a file");
-        io.print("8. Save DVD Library back to file");
-        io.print("9. Exit");
+        io.print("6. Load DVD Library from a file");
+        io.print("7. Save DVD Library back to file");
+        io.print("8. Exit");
 
-        return io.readInt("Please select from the above choices.", 1, 5);
+        return io.readInt("Please select from the above choices.", 1, 8);
     }
 
     //this method prompts the user for title, release date, MPAA, Director's name, Studio, Ratings
