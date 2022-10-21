@@ -20,17 +20,16 @@ public class DvdLibraryDaoImpl implements DvdLibraryDao {
     public static final String LIBRARY_FILE = "library.txt";
     public static final String DELIMITER = "::";
 
+    // MARSHALL AND UNMARSHALL
     private Dvd unmarshallDvd(String dvdAsText){
         String[] dvdTokens = dvdAsText.split(DELIMITER);
 
         String title = dvdTokens[0];
 
-        // Which we can then use to create a new Student object to satisfy
-        // the requirements of the Student constructor.
+        // Which we can then use to create a new Dvd object to satisfy
+        // the requirements of the Dvd constructor.
         Dvd dvdFromFile = new Dvd(title);
 
-        // However, there are 3 remaining tokens that need to be set into the
-        // new student object. Do this manually by using the appropriate setters.
 
         // Index 1 - Release date
         dvdFromFile.setReleaseDate(dvdTokens[1]);
@@ -47,7 +46,7 @@ public class DvdLibraryDaoImpl implements DvdLibraryDao {
         // Index 5 - studio name
         dvdFromFile.setStudio(dvdTokens[5]);
 
-        // We have now created a student! Return it!
+        // We have now created a dvd! Return it!
         return dvdFromFile;
     }
 
@@ -61,17 +60,17 @@ public class DvdLibraryDaoImpl implements DvdLibraryDao {
                             new FileReader(LIBRARY_FILE)));
         } catch (FileNotFoundException e) {
             throw new DvdLibraryDaoException(
-                    "-_- Could not load roster data into memory.", e);
+                    "-_- Could not load library data into memory.", e);
         }
         // currentLine holds the most recent line read from the file
         String currentLine;
-        // currentDvd holds the most recent student unmarshalled
+        // currentDvd holds the most recent dvd unmarshalled
         Dvd currentDvd;
 
         while (scanner.hasNextLine()) {
             // get the next line in the file
             currentLine = scanner.nextLine();
-            // unmarshall the line into a Student
+            // unmarshall the line into a dvd
             currentDvd = unmarshallDvd(currentLine);
 
             dvds.put(currentDvd.getTitle(), currentDvd);
@@ -100,7 +99,7 @@ public class DvdLibraryDaoImpl implements DvdLibraryDao {
         // studio name - don't forget to skip the DELIMITER here.
         dvdAsText += aDvd.getStudio();
 
-        // We have now turned a student to text! Return it!
+        // We have now turned a dvd to text! Return it!
         return dvdAsText;
     }
 
@@ -111,16 +110,16 @@ public class DvdLibraryDaoImpl implements DvdLibraryDao {
             out = new PrintWriter(new FileWriter(LIBRARY_FILE));
         } catch (IOException e) {
             throw new DvdLibraryDaoException(
-                    "Could not save student data.", e);
+                    "Could not save dvd data.", e);
         }
 
-        String studentAsText;
-        List<Dvd> studentList = this.getAllDvds();
-        for (Dvd currentStudent : studentList) {
-            // turn a Student into a String
-            studentAsText = marshallDvd(currentStudent);
-            // write the Student object to the file
-            out.println(studentAsText);
+        String dvdAsText;
+        List<Dvd> dvdList = this.getAllDvds();
+        for (Dvd currentDvd : dvdList) {
+            // turn a dvd into a String
+            dvdAsText = marshallDvd(currentDvd);
+            // write the dvd object to the file
+            out.println(dvdAsText);
             // force PrintWriter to write line to the file
             out.flush();
         }
